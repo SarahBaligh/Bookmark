@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <div class="py-5">
+      <div class="container">
+        <div class="dotline d-flex justify-content-center align-items-center">
+          <h1 class="text-white text-center position-relative py-2">
+            Bookmarker
+          </h1>
+        </div>
+        <div class="fav-site py-4">
+          <h2 class="text-center mb-4">
+            <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <label for="name" class="text-white">
+            <i class="fa-solid fa-book-bookmark me-2 mb-3"></i>
+            <span> Site Name</span>
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-control mb-4"
+            placeholder="Bookmark Name"
+            minlength="3"
+            required
+          />
+
+          <label for="url" class="text-white">
+            <i class="fa-solid fa-link me-2 mb-3"></i>
+            <span> Site URL</span>
+          </label>
+          <input
+            type="url"
+            id="url"
+            name="url"
+            class="form-control mb-3"
+            placeholder="Website URL"
+            minlength="3"
+            required
+          />
+          <div class="d-flex justify-content-center">
+            <button
+              id="submitBtn"
+              class="btn text-center text-white px-5"
+              onclick="getValues()"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+
+        <div class="py-4">
+          <table class="table table-striped text-center">
+            <thead>
+              <tr>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Bootstrap js -->
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="./JS/main.js"></script>
+  </body>
+</html>

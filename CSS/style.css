@@ -1,0 +1,100 @@
+body {
+  background-image: url(../images/pngtree-three-bookmarks-with-photos-of-ancient-buildings-picture-image_2486688.jpg);
+  background-color: rgba(0, 0, 0, 0.765);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  font-family: "PT Sans Caption", sans-serif;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: #bb4120;
+}
+
+.dotline {
+  border-bottom: 3px dotted #fff;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  z-index: 1;
+}
+
+h1::before {
+  content: "";
+  width: 100%;
+  height: 25%;
+  background-color: #bb4120;
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+h1:hover::before {
+  height: 50%;
+}
+
+h2 {
+  font-family: "Righteous", sans-serif;
+  background: linear-gradient(to right, #8f4220, #dd924e);
+  background-clip: text;
+  color: transparent;
+}
+
+.fav-site button {
+  background-color: #d1512d;
+  box-shadow: 5px 4px 4px 2px #d1512dcc;
+  border: 2px solid transparent;
+}
+
+.fav-site button:hover {
+  background-color: #bb4120;
+}
+
+#submitBtn:active {
+  border-color: #fff;
+  background-color: transparent;
+  box-shadow: 0 0 0 transparent;
+}
+
+.fav-site {
+  border-bottom: 3px dotted #fff;
+}
+
+.form-control:focus {
+  border-color: #662d15;
+  box-shadow: 0px 0px 0px 3px #bb4220ae;
+}
+
+#visitBtn {
+  background-color: #9eb23b;
+  color: #fff;
+  border: 2px solid transparent;
+}
+
+#visitBtn:hover {
+  background-color: #8a9e23;
+  border-color: #6e8018;
+}
+
+#deleteBtn {
+  background-color: #eb1d36;
+  color: #fff;
+  border: 2px solid transparent;
+}
+
+#deleteBtn:hover {
+  background-color: #d30820;
+  border-color: #ba081d;
+}
+
+#visitBtn:active,
+#deleteBtn:active {
+  border-color: #000;
+  background-color: transparent;
+  color: #000;
+}

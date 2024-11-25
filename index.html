@@ -39,7 +39,8 @@
             type="text"
             id="name"
             name="name"
-            class="form-control mb-4"
+            class="form-control mb-4 is-invalid"
+            oninput="validationName()"
             placeholder="Bookmark Name"
             minlength="3"
             required
@@ -53,7 +54,8 @@
             type="url"
             id="url"
             name="url"
-            class="form-control mb-3"
+            class="form-control mb-3 is-invalid"
+            oninput="validationUrl()"
             placeholder="Website URL"
             minlength="3"
             required

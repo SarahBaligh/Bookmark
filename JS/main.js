@@ -92,18 +92,23 @@ function visitSite(index) {
 function validationUrl() {
   var urlRegex =
     /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
-  if (urlRegex.test(SiteUrlInput.value)) {
+    if (urlRegex.test(SiteUrlInput.value)) {
+    SiteUrlInput.classList.replace("is-invalid","is-valid")
     return true;
   } else {
+    SiteUrlInput.classList.replace("is-valid","is-invalid")
     return false;
   }
 }
 
 function validationName() {
   var nameRegex = /[a-zA-Z0-9_]{3,}/g;
+  
   if (nameRegex.test(SiteNameInput.value)) {
+    SiteNameInput.classList.replace("is-invalid","is-valid")
     return true;
   } else {
+    SiteNameInput.classList.replace("is-valid","is-invalid")
     return false;
   }
 }

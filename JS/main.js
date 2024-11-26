@@ -93,10 +93,12 @@ function validationUrl() {
   var urlRegex =
     /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
     if (urlRegex.test(SiteUrlInput.value)) {
-    SiteUrlInput.classList.replace("is-invalid","is-valid")
+    SiteUrlInput.classList.add("is-valid")
+    SiteUrlInput.classList.remove("is-invalid")
     return true;
   } else {
-    SiteUrlInput.classList.replace("is-valid","is-invalid")
+    SiteUrlInput.classList.add("is-invalid")
+    SiteUrlInput.classList.remove("is-valid")
     return false;
   }
 }
@@ -105,10 +107,12 @@ function validationName() {
   var nameRegex = /[a-zA-Z0-9_]{3,}/g;
   
   if (nameRegex.test(SiteNameInput.value)) {
-    SiteNameInput.classList.replace("is-invalid","is-valid")
+    SiteNameInput.classList.add("is-valid")
+    SiteNameInput.classList.remove("is-invalid")
     return true;
   } else {
-    SiteNameInput.classList.replace("is-valid","is-invalid")
+    SiteNameInput.classList.add("is-invalid")
+    SiteNameInput.classList.remove("is-valid")
     return false;
   }
 }
